@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sở thích của bạn</title>
+<!--    <link rel="stylesheet" href="exercise2_1.css">-->
+    <style>
+        form{
+            background: white;
+            border: aqua 10px solid;
+            width: 400px;
+        }
+        h3{
+            margin: auto;
+            color: white;
+            background: #d61b06;
+            text-align: center;
+
+        }
+        td{
+            color:orange;
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+
+<form action="#" method="post">
+    <h3>Sở thích của bạn</h3>
+    <table >
+        </tr>
+        <tr>
+            <td align="right" style="color: blue" width="32%">Họ và tên</td>
+            <td><input type="text" name="yourname"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td align="right" style="color: blue">Email</td>
+            <td><input type="text" name="email"></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table >
+        <tr>
+            <td  width="27%" style="color: blue" align="right">Sở thích</td>
+            <td><input type="checkbox" name="hobby">Thể thao</td>
+            <td><input type="checkbox" name="hobby">Âm nhạc</td>
+            <td><input type="checkbox" name="hobby">Đọc sách</td>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox" name="hobby" >Lướt web</td>
+            <td><input type="checkbox" name="hobby">Chơi game</td>
+            <td><input type="checkbox" name="hobby">Điện ảnh</td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox" name="hobby">Du lịch</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2"align="left"><input type="submit" name="sumitform" value="Gởi Thông tin">
+            <input type="reset" name="resetform" value="Nhập lại"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

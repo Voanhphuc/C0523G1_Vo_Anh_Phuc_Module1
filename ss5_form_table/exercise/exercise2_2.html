@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form cơ bản 2</title>
+    <style>
+        form{
+            background: yellowgreen;
+            border: 10px solid yellowgreen;
+            width: 350px;
+        }
+        table{
+        font-size: small;
+            padding: unset;
+        }
+        h3{
+            background: darkturquoise;
+            text-align: left;
+            margin: auto;
+        }
+        td{
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+<form action="#" method="post">
+    <h3>ĐĂNG KÝ HỌC VIÊN</h3>
+    <table>
+        <tr>
+            <td align="left">Họ và tên</td>
+            <td><input type="text"name="fullname"style="border: 2px inset"></td>
+        </tr>
+        <tr>
+            <td align="left">Ngày sinh</td>
+            <td><input type="text"name="date" style="border: 2px inset"></td>
+        </tr>
+        <tr>
+            <td align="left">Giới tính</td>
+            <td><input type="radio" name="gioitinh" >Nam
+            <input type="radio" name="gioitinh">Nữ</td>
+        </tr>
+        <tr>
+            <td align="left">Địa Chỉ</td>
+            <td><textarea style="width: 170px" style="border: 3px inset"></textarea></td>
+        </tr>
+        <tr>
+            <td align="left">Lớp</td>
+            <td><select name="lop"style="border:2px inset">
+                <option>--Chọn lớp--</option>
+                <option>Lớp A</option>
+                <option>Lớp B</option>
+                <option>Lớp C</option>
+            </select> </td>
+        <tr>
+            <td align="left">Email</td>
+            <td><input type="text" name="email"style="border: 2px inset"></td>
+        </tr>
+        <tr>
+            <td align="left">Điện Thoại</td>
+            <td><input type="number" name="phone"style="border: 2px inset"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit"name="btsubmit" value="Đăng ký" style="border: 2px outset">
+                <input type="reset"name="bsubmit" value="Nhập lại" style="border: 2px outset">
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>
