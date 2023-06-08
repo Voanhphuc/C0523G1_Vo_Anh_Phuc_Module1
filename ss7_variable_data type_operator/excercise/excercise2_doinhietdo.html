@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Nhập độ giá trị oC</td>
+        <td><input type="number"name="numberC" id="doC"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="doinhietDo()">Độ F</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function doinhietDo(){
+        let x=9
+        let y=5
+        let z=32
+        let c = document.getElementById("doC").value
+        let f=(parseInt(c)*x+z)/y
+        alert("giá trị độ F là :  " +f +" oF")
+    }
+</script>
+</body>
+</html>

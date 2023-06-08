@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình tròn</title>
+</head>
+<body>
+<b>Diện tích hình tròn</b>
+<table style="text-align: center ;margin: auto">
+    <tr>
+        <td>Nhập  R</td>
+        <td><input type="number"name="numberC" id="banKinh"></td>
+<!--        <td>-->
+<!--            <a href="excercise4_chuvihinhtron.html">Qua trang tính chu vi</a>-->
+<!--        </td>-->
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button onclick="circleAre()">Submit</button>
+        </td>
+
+    </tr>
+</table>
+<script>
+    function circleAre(){
+        let pi=3.14;
+        let r= document.getElementById("banKinh").value;
+        // let s= parseInt(r)**2*pi
+        let s ;
+        if (r>0 && r!=null){
+            // alert("Diện tích hình tròn là: "+s)
+            s = parseInt(r)**2*pi;
+            document.getElementById("kq").innerHTML= "Kết quả :"+s;
+        }
+        else {
+            alert("Nhập R");
+        }
+    }
+
+
+</script>
+<p id="kq">Kết quả</p>
+</body>
+</html>

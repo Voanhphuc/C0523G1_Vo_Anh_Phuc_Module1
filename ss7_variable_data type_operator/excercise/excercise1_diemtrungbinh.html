@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diểm trung bình</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Nhập điểm Lý</td>
+        <td><input type="number" name="d1" id="diemL"></td>
+    </tr>
+    <tr>
+        <td>Nhập điểm Hoá</td>
+        <td><input type="number" name="d2" id="diemH"></td>
+    </tr>
+    <tr>
+        <td>Nhập điểm Sinh</td>
+        <td><input type="number" name="d2" id="diemS"></td>
+    </tr>
+    <!--Điểm trung bình-->
+    <!--<input type="text" name="diem"id="diemTB"><br>-->
+    <tr>
+        <td style="text-align: center" colspan="2">
+            <button onclick="mediumScore()">Tính diểm</button>
+        </td>
+        <td style="text-align: center" colspan="2">
+          <button onclick="sumScore()">Tỏng điểm 3 môn</button>
+        </td>
+    </tr>
+</table>
+
+<script>
+    function mediumScore() {
+        let a = document.getElementById("diemL").value;
+        let b= document.getElementById("diemH").value;
+        let c = document.getElementById("diemS").value;
+        let dtb ;
+        if (a >= 0 && a <= 10 && b >= 0 && b <= 10 && c >= 0 && c <= 10) {
+          dtb  = (Number(a) + Number(b) + Number(c)) / 3;
+          document.getElementById("kq").innerText="Kết quả điểm trung bình: "+dtb
+        } else {
+            alert('Nhập sai điểm ,mời nhập lại')
+        }
+
+    }
+    function sumScore() {
+        let a = document.getElementById("diemL").value;
+        let b = document.getElementById("diemH").value;
+        let c = document.getElementById("diemS").value;
+        let td ;
+        if (a >= 0 && a <= 10 && b >= 0 && c <= 10 && c >= 0 && c <= 10) {
+            td=Number(a) + Number(b) + Number(c);
+            document.getElementById("kq").innerText="Tổng điểm 3 môn: "+td
+        } else {
+            alert('Nhập sai điểm ,mời nhập lại')
+        }
+
+    }
+</script>
+<div id="kq"></divid>
+</body>
+</html>

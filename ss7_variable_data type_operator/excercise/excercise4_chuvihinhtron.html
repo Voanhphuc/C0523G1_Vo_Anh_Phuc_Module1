@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu vi hình tròn</title>
+</head>
+<body>
+<b>Chu vi hình tròn</b>
+<table style="text-align: center ;margin: auto">
+    <tr>
+        <td>Nhập D</td>
+        <td><input type="number"name="number" id="duongKinh"></td>
+<!--        <td><a href="excercise3_dientichhinhtron.html">Trở lại trang tính diện tích</a>-->
+<!--        </td>-->
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button onclick="perimeterAre()">Submit</button>
+        </td>
+
+    </tr>
+</table>
+<script>
+    function perimeterAre(){
+        let pi=3.14
+        let d= document.getElementById("duongKinh").value
+        let c;
+        if (d>0 && d!=null){
+            c = parseInt(d)*pi;
+        }
+        else {
+            alert("Nhập lại đường kính")
+
+
+        }
+        document.getElementById("kq").innerHTML= "Kết quả: "+c
+    }
+</script>
+<p id="kq">Kết quả</p>
+</body>
+</html>
