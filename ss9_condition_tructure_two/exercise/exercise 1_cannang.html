@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<table>
+    <tr>
+        <td>Cân nặng: (kg)</td>
+        <td><input type="number" id="wei"></td>
+
+    </tr>
+    <tr>
+        <td>Chiều cao:(m)</td>
+        <td><input type="number" id="hei"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="bmi()">Tính</button>
+        </td>
+    </tr>
+</table>
+<b id="kq"></b>
+<body>
+<script>
+    function bmi(){
+    let weight = document.getElementById('wei').value;
+    let height = document.getElementById('hei').value;
+    let bmi = weight / (Math.pow(height,2));
+    if(bmi<18.5){
+       document.getElementById('kq').innerHTML= 'Underweight'
+    }else if(bmi>=18.5 && bmi<=25){
+        document.getElementById('kq').innerHTML= 'Normal'
+    }else if(bmi>=25 && bmi<30){
+        document.getElementById('kq').innerHTML= 'Overweight'
+    }else
+        document.getElementById('kq').innerHTML= 'Obese'
+    }
+</script>
+</body>
+</html>
