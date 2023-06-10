@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trinh bậc2</title>
+</head>
+<body>
+<script>
+    let a = prompt('nhap so a ');
+    let b = prompt('nhập số b');
+    let c = prompt('nhập số c');
+    let denTa = Math.pow(b,2) - 4 * a * c;
+    if (denTa == 0) {
+        alert('phương có nghiệm kép x= ' + -b / 2 * a);
+    } else if (denTa > 0) {
+        x1 = (-b - Math.sqrt(denTa)) / 2 * a
+        x2 = (-b + Math.sqrt(denTa)) / 2 * a
+
+        alert('phương trình có  nghiệm x1=' + x1 + "x2= " + x2);
+    } else
+        alert('Phương trình vô nghiệm');
+
+
+</script>
+</body>
+</html>
