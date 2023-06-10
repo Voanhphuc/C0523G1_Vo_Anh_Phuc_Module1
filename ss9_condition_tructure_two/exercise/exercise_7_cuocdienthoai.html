@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td> Nhập số phút gọi</td>
+        <td><input id="soPhut" type="number"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="tinhTien()">Tính Tiền</button>
+        </td>
+    </tr>
+</table>
+<b id="result"></b>
+<ul>
+    <li>Phí thuê bao bắt buộc là 25 nghìn</li>
+    <li>600 đồng cho mỗi phut gọi, của 50 phút đầu tiên</li>
+    <li>400 đồng cho mỗi phút gọi, của 150 phút tiếp theo</li>
+    <li>200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên</li>
+</ul>
+
+<script>
+    function tinhTien(){
+        let phut=document.getElementById('soPhut').value;
+        let tongTien;
+        const phiBatbuoc=25000;
+        if(phut>200){
+            tongTien=(phut-200)*200+150*400+50*600+phiBatbuoc;
+            document.getElementById('result').innerHTML='Số tiền phải trả là'+tongTien+'VND';
+        }
+        if(phut>50){
+            tongTien=(phut-50)*400+50*600+phiBatbuoc;
+            document.getElementById('result').innerText= 'Số tiền phải trả là'+tongTien+'VND';
+        }else {
+            tongTien=phiBatbuoc+phut*600;
+            document.getElementById('result').innerText= 'Số tiền phải trả là'+tongTien+'VND';
+        }
+    }
+</script>
+</body>
+</html>

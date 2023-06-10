@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Nhập Doanh số bán hàng</td>
+        <td><input id="tienDoanhThu" type="number" ></td>
+        <td>VND</td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="doanhThu()">Submit</button>
+        </td>
+        <td></td>
+    </tr>
+</table>
+<b id="tienHh"></b>
+<ul>
+    <li>Doanh thu trên 10 triệu nhận được 1% hoa hồng</li>
+    <li>Doanh thu trên 40 triệu nhận được 3% hoa hồng</li>
+    <li>Doanh thu trên 80 triệu nhận được 5% hoa hồng</li>
+    <li>Doanh thu trên 110 triệu nhận được 6% hoa hồng</li>
+</ul>
+<script>
+    function doanhThu() {
+        let tienDt = document.getElementById('tienDoanhThu').value;
+        let hoaHong;
+
+        if (tienDt > 110000000) {
+               hoaHong = tienDt * 6 / 100
+              document.getElementById('tienHh').innerHTML = 'Tiền hoa hồng 6% :' + hoaHong + '(VND)';
+        }else if (tienDt > 80000000) {
+                hoaHong = tienDt * 5 / 100
+                document.getElementById('tienHh').innerHTML = 'Tiền hoa hồng 5% :' + hoaHong + '(VND)';
+        }else if (tienDt > 40000000) {
+                hoaHong = tienDt * 3 / 100;
+                document.getElementById('tienHh').innerHTML = 'Tiền hoa hồng 3% :' + hoaHong + '(VND)';
+        }else if (tienDt > 10000000) {
+             hoaHong = tienDt * 1 / 100;
+             document.getElementById('tienHh').innerHTML = 'Tiền hoa hồng 1% :' + hoaHong + '(VND)';
+         }
+
+    }
+</script>
+</body>
+</html>

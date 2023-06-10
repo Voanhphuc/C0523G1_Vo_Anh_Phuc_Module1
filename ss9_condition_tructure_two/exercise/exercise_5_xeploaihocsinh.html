@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<table>
+    <tr>
+        <td>Điểm bài kiểm tra: </td>
+        <td><input id="diemKt" type="number"max="10" min="0"></td>
+    </tr>
+    <tr>
+        <td>Điểm thi giữa kỳ: </td>
+        <td><input id="diemGk" type="number"max="10" min="0"></td>
+    </tr>
+    <tr>
+        <td>Điểm thi cuối kỳ: </td>
+        <td><input id="diemCk" type="number"max="10" min="0"></td>
+    </tr>
+    <tr>
+        <td><button onclick="tinhDiem()">Xếp loại</button></td>
+    </tr>
+</table>
+<p id="hienThi"></p>
+<body>
+<script>
+    function tinhDiem(){
+    let diemKt = document.getElementById('diemKt').value;
+    let diemGk = document.getElementById('diemGk').value;
+    let diemCk = document.getElementById('diemCk').value;
+    let diemXl = (parseInt(diemKt) + parseInt(diemGk) + parseInt(diemCk))/3;
+    if(diemXl <4 ){
+        document.getElementById('hienThi').innerHTML='Xếp loại Yếu. Điểm TB: ' + diemXl;
+    }else if(diemXl<6.5){
+        document.getElementById('hienThi').innerHTML='Xếp loại Trung Bình .Điểm TB: ' +diemXl;
+    }else  if(diemXl<8){
+        document.getElementById('hienThi').innerText='Xếp loại Khá. Điểm TB: ' +diemXl;
+    }else
+        document.getElementById('hienThi').innerText='Xếp loại Giỏi. Điểm TB: '+diemXl;
+    }
+</script>
+</body>
+</html>
