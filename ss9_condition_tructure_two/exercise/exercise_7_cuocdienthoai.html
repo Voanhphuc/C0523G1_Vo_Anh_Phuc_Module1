@@ -31,15 +31,12 @@
         const phiBatbuoc=25000;
         if(phut>200){
             tongTien=(phut-200)*200+150*400+50*600+phiBatbuoc;
-            document.getElementById('result').innerHTML='Số tiền phải trả là'+tongTien+'VND';
-        }
         if(phut>50){
             tongTien=(phut-50)*400+50*600+phiBatbuoc;
-            document.getElementById('result').innerText= 'Số tiền phải trả là'+tongTien+'VND';
         }else {
             tongTien=phiBatbuoc+phut*600;
-            document.getElementById('result').innerText= 'Số tiền phải trả là'+tongTien+'VND';
         }
+        document.getElementById('result').innerText= 'Số tiền phải trả là'+tongTien+'VND';
     }
 </script>
 </body>
