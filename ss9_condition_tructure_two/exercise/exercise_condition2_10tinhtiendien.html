@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bậc 1 (0 đến 50kWh): 1.678 VND/kWh.-->
+<!--Bậc 2 (51 đến 100kWh): 1.734 VND/kWh.-->
+<!--Bậc 3 (101 đến 200 kWh): 2.014 VND/kWh.-->
+<!--Bậc 4 (201 đến 300 kWh): 2.536 VND/kWh.-->
+<!--Bậc 5 (301 đến 400 kWh): 2.834 VND/kWh.-->
+<!--Bậc 6 (401 kWh trở lên): 2.927 VND/kWh.-->
+<script>
+    let soDien = prompt('nhập số điện bạn đã sử dụng');
+    let soTien;
+    if (soDien > 400) {
+        soTien = (soDien - 400) * 2.927 + 100 * 2.834 + 100 * 2.536 + 100 * 2.014 + 50 * 1734 + 50 * 1.678;
+    }
+    if (soDien > 300) {
+        soTien = (soDien - 300) * 2.834 + 100 * 2.536 + 100 * 2.014 + 50 * 1734 + 50 * 1.678;
+    }
+    if (soDien > 200) {
+        soTien = (soDien - 200) * 2.536 + 100 * 2.014 + 50 * 1734 + 50 * 1.678;
+    }
+    if (soDien > 100) {
+        soTien = (soDien - 100) * 2.014 + 50 * 1734 + 50 * 1.678;
+    }
+    if (soDien > 50) {
+        soTien = (soDien - 50) * 1.734 + 50 * 1.678;
+    } else
+        soTien = soDien * 1.678;
+    alert('số tiền là' + soTien);
+</script>
+</body>
+</html>

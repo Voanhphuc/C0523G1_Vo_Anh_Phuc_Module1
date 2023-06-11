@@ -25,18 +25,19 @@
 </ul>
 
 <script>
-    function tinhTien(){
-        let phut=document.getElementById('soPhut').value;
+    function tinhTien() {
+        let phut = document.getElementById('soPhut').value;
         let tongTien;
-        const phiBatbuoc=25000;
-        if(phut>200) {
+        const phiBatbuoc = 25000;
+        if (phut > 200) {
             tongTien = (phut - 200) * 200 + 150 * 400 + 50 * 600 + phiBatbuoc;
-        }if(phut>50){
-            tongTien=(phut-50)*400+50*600+phiBatbuoc;
-        }else {
-            tongTien=phiBatbuoc+phut*600;
         }
-        document.getElementById('result').innerText= 'Số tiền phải trả là'+tongTien+'VND';
+        if (phut > 50) {
+            tongTien = (phut - 50) * 400 + 50 * 600 + phiBatbuoc;
+        } else {
+            tongTien = phiBatbuoc + phut * 600;
+        }
+        document.getElementById('result').innerText = 'Số tiền phải trả là' + tongTien + 'VND';
     }
 </script>
 </body>
