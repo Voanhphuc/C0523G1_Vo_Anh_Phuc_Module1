@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thuNhap =parseInt( prompt('nhập lương '));
+    let thueThuNhap;
+
+
+     if (thuNhap >= 80) {
+         thueThuNhap = 0.35*thuNhap;
+     }
+     else if (thuNhap >= 52) {
+         thueThuNhap = 0.3*thuNhap;
+     }
+     else if (thuNhap >= 32) {
+         thueThuNhap = 0.25*thuNhap;
+     }
+    else if (thuNhap >= 18) {
+         thueThuNhap = 0.2*thuNhap;
+     }
+    else if (thuNhap >= 10) {
+        thueThuNhap = 0.15*thuNhap;
+     }
+    else if (thuNhap >= 5) {
+         thueThuNhap = 0.1*thuNhap;
+     } else
+         thueThuNhap=0*thuNhap;
+    alert('bạn phải đóng số tiền thuế thu nhập cá nhân là: ' + thueThuNhap);
+
+</script>
+</body>
+</html>

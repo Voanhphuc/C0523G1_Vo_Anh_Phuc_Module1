@@ -9,12 +9,14 @@
     let a = +prompt('Nhập số a');
     let b = +prompt('Nhập số a');
     let c = +prompt('Nhập số a');
-    if (a > b && a > c) {
-        alert('số lớ nhất là: a=' + a);
-    } else if (b > c) {
-        alert('số lớn nhất là: b=' + b);
-    } else
-        alert('số lớn nhất là: c ='+ c);
+    let max=a;
+    if (b > max ) {
+        max=b;
+    }
+    if (c>max) {
+        max=c;
+    }
+        alert('số lớn nhất là: '+ max);
 </script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Số tháng vay nhỏ hơn 12 tháng thì lãi suất là 8% -->
+<!--Số tháng vay lớn hơn 12 tháng thì lãi suất cộng thêm 1%;-->
+<!--Số tháng vay lớn hơn 24 tháng thì lãi suất cộng thêm 3%;-->
+<script>
+    let soTienVay = prompt('nhập số tiền vây');
+    let soThangVay = prompt('nhập số tháng vay');
+    let laiSuat = soTienVay * 8 / 100 / 12 * soThangVay;
+    // alert('số tiền laic bạn nhận đc là: '+laiSuat);
+    if (soThangVay > 12) {
+        laiSuat = laiSuat + 0.1 * soTienVay;
+        alert(laiSuat);
+    } else if (soThangVay > 24) {
+        laiSuat = laiSuat + 0.3 * soTienVay;
+        alert(laiSuat)
+    } else
+        alert(laiSuat);
+</script>
+</body>
+</html>
