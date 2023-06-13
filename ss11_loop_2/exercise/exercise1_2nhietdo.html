@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhietDo=Number(prompt("nhap nhiet do"));
+    while (nhietDo<20 || nhietDo>100){
+        if(nhietDo<20){
+            alert("nhiet do qua thap,Tang nhiet len ");
+            nhietDo=Number(prompt("nhap nhiet do"));
+        }else if (nhietDo>100){
+            alert("nhiet do qua cao, Giam nhiet do xuong");
+            nhietDo=Number(prompt("nhap nhiet do"));
+        }
+    }alert("nhiet do binh thuong");
+</script>
+</body>
+</html>

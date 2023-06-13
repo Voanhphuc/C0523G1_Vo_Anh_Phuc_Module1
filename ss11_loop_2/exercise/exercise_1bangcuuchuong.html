@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Bang cuu chương</title>
+</head>
+<body>
+<script>
+    let sout = "<table border='2' width='400' cellpadding='5' cellspacing='10' style='font-size: small'>";
+    let i, j;
+    for (i = 1; i <= 9; i++) {
+        sout = sout + "<tr>";
+        for (j = 1; j <= 9; j++) {
+            sout = sout + "<td>" + j + "x" + i + "=" + i * j + "</td>";
+        }sout=sout+"</tr>"
+    }
+    sout=sout+"</table>";
+    document.write(sout)
+</script>
+</body>
+</html>
