@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="doanSo()">Bắt đầu chơi</button>
+<script>
+    function doanSo() {
+        let nhapSoTruoc = +prompt('Nhập số bạn muốn doán trong khoảng nào');
+        let nhapSoSau = +prompt('Nhập số bạn muốn doán trong khoảng nào');
+        let soNgauNhien = Math.floor(Math.random() * (nhapSoTruoc-nhapSoSau)+nhapSoSau);
+
+        let i = 1;
+      do {
+          let kiemTraSo = +prompt('Nhập vào số bạn đoán');
+          if (kiemTraSo<soNgauNhien){
+              alert("So ban nhap nho hơn con "+(3-i)+" lan nhap")
+          }else if (kiemTraSo>soNgauNhien){
+              alert("So ban nhap lon hơn con "+(3-i)+" lan phap")
+          }else {
+              alert("chuc mung ban da doan dung")
+              break;
+          }i++;
+
+      }while (i<=3)
+    }
+</script>
+</body>
+</html>
