@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="nhap">
+    <button type="button" onclick="timKiem()">Tìm kiếm</button>
+    <div id="result"></div>
+</form>
+<script>
+    function timKiem() {
+        let arr1 = ['hello', 'goodbye', 'go', 'right', 'left'];
+        let arr2 = ['xin chào', 'tạm biệt', 'đi', 'phải', 'trái'];
+        let str = document.getElementById('nhap').value;
+        let result;
+        let check=false;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] === str) {
+                result = arr2[i];
+                check=true;
+            }
+            document.getElementById('result').innerText = result;
+        }
+        if (check===false){
+            document.write('Chưa cập nhật');
+        }
+    }
+</script>
+</body>
+</html>

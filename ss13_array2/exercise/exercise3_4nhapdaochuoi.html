@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a;
+    do {
+        a = +prompt('so phan tu');
+        if (a <= 0) {
+            alert('số nhập vào phải lớn hơn 0 vui long nhập lại');
+        }
+    } while (a <= 0)
+    let arr = [];
+    for (let i = 0; i < a; i++) {
+        arr.push(+prompt('nhập phần tử thứ' + i + 1));
+    }
+    document.write('mảng sau khi được nhập: '+ arr);
+    document.write('<br/>'+'mảng sau khi được đảo ngược : '+ arr.reverse().join());
+
+</script>
+</body>
+</html>
