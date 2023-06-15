@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [12, 3, 7, 8, 9, 5, 45, 13, 78, 14];
+    let numberTest = +prompt('nhập số muốn kiểm tra');
+    document.write(arr);
+    t = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (numberTest == arr[i]) {
+            delete arr[i];
+            t++;
+            for (let j=0;j>arr.length;j++){
+                arr[j]=a[j+1];
+            }
+            arr[arr.length]=0;
+        }
+    }
+
+
+    if (t != 0) {
+        document.write('<br/>phần tử vừa nhập vào là: '+numberTest+'  có trong mảng và đã bị xoá: '+arr.join(' '))
+    } else {
+        document.write('<br/>phần tử vừa nhập vào không có trong mảng')
+    }
+
+</script>
+</body>
+</html>

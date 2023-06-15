@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [12, 3, 7, 8, 9, 5, 45, 13, 78, 14];
+    let numberTest = +prompt('nhập số muốn kiểm tra');
+    t = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (numberTest == arr[i]) {
+            t++;
+        }
+    }
+    if (t != 0) {
+        document.write('phần tử vừa nhập vào  có trong mảng')
+    } else {
+        document.write('phần tử vừa nhập vào không có trong mảng')
+    }
+</script>
+</body>
+</html>
