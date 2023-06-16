@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt('nhâp chuoi');
+    chuoi = chuoi.split(' ');
+    console.log(chuoi);
+    let dem = 0;
+    for (let i = 0; i < chuoi.length; i++) {
+        if (chuoi[i] !== ""&& isNaN(chuoi[i])===true) {
+            dem++;
+        }
+    }
+    document.write(dem);
+</script>
+</body>
+</html>

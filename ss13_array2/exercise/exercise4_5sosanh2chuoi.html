@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi1 = prompt('nhap chuoi 1');
+    let chuoi2 = prompt('nhap chuoi 2');
+    chuoi1 = chuoi1.split(' ');
+    chuoi2 = chuoi2.split(' ');
+    document.write('<br/> chuỗi 1: ' + chuoi1.join(' '))
+    document.write('<br/> chuỗi 2: ' + chuoi2.join(' ') + '<br/>')
+    let check = 0;
+    for (let i = 0; i < chuoi1.length; i++) {
+        for (let j = 0; j < chuoi2.length; j++) {
+            if (chuoi1[i] === chuoi2[j]) {
+                check++;
+            }
+        }
+    }
+    if (check !== 0) {
+        document.write(' 2 chuỗi giống nhau')
+    } else {
+        document.write('2 chuỗi khác nhau')
+    }
+</script>
+</body>
+</html>
