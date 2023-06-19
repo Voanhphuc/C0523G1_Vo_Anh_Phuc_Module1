@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        } else {
+            for (let i = 2; i <number; i++) {
+                if (number % i == 0 ) {
+                    return false
+                }
+            }
+        }
+        return true;
+    }
+
+     // let n = +prompt("nhập số kt")
+     // isPrime(n);
+    let count=0;
+    for (let n=1;n<10000;n++){
+        if (isPrime(n)){
+            count++;
+            document.write(n+"<br/>");
+        }
+    }
+    document.write('tất cả số nguyên tố bé hơn 10000 là: '+count);
+
+</script>
+</body>
+</html>

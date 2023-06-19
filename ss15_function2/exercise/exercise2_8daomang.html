@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function daoMang(arr) {
+        for (let i = 0; i < arr.length/2; i++) {
+            let temp = arr[i];
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = temp;
+        }
+        // document.write(arr);
+    }
+    let n;
+    do {
+        n = +prompt('nhập n chiều dài mảng lớn hơn 0')
+        if (n < 0) {
+            alert('số nhập vào phải lớn hơn 0 vui9 lòng nhập lại')
+        }
+    } while (n <= 0)
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a.push(+prompt('nhập phần tử thứ' + i + 1));
+    }
+    document.write('mảng sau khi được nhập: ' + a.join(',')+'<br/>');
+    daoMang(a);
+     document.write( 'mảng sau khi được đảo ngược : '+a );
+</script>
+</body>
+</html>
