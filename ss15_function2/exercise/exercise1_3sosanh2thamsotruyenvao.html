@@ -9,15 +9,15 @@
     function soSanh(a,b){
         let sum;
         if(a>b){
-            alert('a lớn hơn b');
+         return   'a lớn hơn b: '+a+'>'+b;
         }else {
            sum= a+b;
-            alert('tổng 2 số là '+sum);
+            return ' tổng 2 số là: '+sum;
         }
     }
     let x=+prompt('nhập số a');
-    let y=+prompt('nhập số b')
-    soSanh(x,y);
+    let y=+prompt('nhập số b');
+    alert(soSanh(x,y));
 </script>
 </body>
 </html>
