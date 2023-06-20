@@ -6,23 +6,21 @@
 </head>
 <body>
 <script>
-    let c;
 
-    function doiCho(a, b) {
-        c = a;
-        a = b;
-        b = c;
-        // return a;
-        // return b;
-        document.writeln('số thứ nhất: ' + a + ' số thứ hai: ' + b)
-        console.log(a, b)
 
+    function doiCho(arr) {
+        let c = arr[0];
+        arr[0] = arr[1];
+        arr[1] = c;
     }
 
-    let n1 = +prompt('nhap so 1')
-    let n2 = +prompt('nhap so 2')
-    document.write("số thứ nhất: " + n1 + "số thứ hai: " + n2 + "<br/>");
-    doiCho(n1, n2);
+    let n1 = 1;
+    let n2 = 2;
+    let arr2 = [n1, n2]
+    document.write("chưa đổi chổ:  "+arr2)
+     doiCho(arr2);
+    document.write("<br/>đã đổi chỗ: "+ arr2);
+
 </script>
 </body>
 </html>

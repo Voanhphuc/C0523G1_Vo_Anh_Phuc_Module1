@@ -10,20 +10,34 @@
     let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
 
     function findStar(star) {
-        for (let i = 0; i < arr1.length; i++) {
-            if (star === arr1[i]) {
-                return arr2[i];
+    //     for (let i = 0; i < arr1.length; i++) {
+    //         if (star.trim().toLowerCase() === arr1[i].trim().toLowerCase()) {
+    //             return arr2[i];
+    //         }
+    //     }
+    //     return false;
+        let kq=[];
+        for(let index in arr1){
+            let n=star.trim().toLowerCase();
+            if(arr1[index].toLowerCase().includes(n)){
+                kq.push(arr2[index]);
             }
         }
-        return false;
-    }
+        if(kq.length>0){
+            return "nhung chom sao là: "+kq.toString();
+        }else{
+            return "không có: "+star;
+        }
 
-    let a = prompt("nhập ngôi sao")
-    if (findStar(a) === false) {
-        document.write('không có ngôi sao bạn tìm')
-    } else {
-        document.write(findStar(a))
-    }
+     }
+
+    let a = prompt("nhập ngôi sao");
+    alert(findStar(a));
+    // if (findStar(a) === false) {
+    //     document.write('không có ngôi sao bạn tìm')
+    // } else {
+    //     document.write(findStar(a))
+    // }
 </script>
 </body>
 </html>
