@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=['1','2','3','a','s','s','-','-','3','1','1','b','q','a','z'];
+    let b=prompt('nhập ký tự vào kiểm tra')
+    // check(b);
+    document.write(" số lần ký tự xuất  hiện trong mảng là: "+check(b)+' lần')
+    function check(kt){
+
+        let count=0;
+        for (let i=0;i<a.length;i++) {
+            if (kt === a[i]) {
+                count++;
+            }
+        }
+        // document.write("xuất hiện trong mảng"+count)
+        if (count>0){
+            return count
+            }else {
+            return -1;
+        }
+    }
+</script>
+</body>
+</html>
