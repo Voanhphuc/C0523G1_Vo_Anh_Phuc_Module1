@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button onclick="nokia.batDienThoai()">Bật điệ thoại</button>
+<button onclick="stn()">Soạn tin nhắn</button>
+<button onclick="nokia.goiTinNhan()">Gởi tin nhắn</button>
+<button onclick="nokia.tatDienThoai()">Tắt điệ thoại</button>
+<p>Pin: <span id="pin"></span>%</p>
+<script>
+    class Dienthoai {
+        constructor(pin, thunhap, thuden, thudi, trangthai) {
+            this.pin = pin;
+            this.thunhap = thunhap;
+            this.thuden = thuden;
+            this.thudi = thudi;
+            this.trangthai = trangthai;
+        }
+
+        ktTrangThai() {
+            if (this.trangthai) {
+                alert("Điện thoại đang bật");
+            } else {
+                alert("Điện thoại đang tắt")
+            }
+            this.pin--;
+        }
+
+        batDienThoai() {
+            if (this.trangthai) {
+                alert("Điện thoại đã bật");
+            } else {
+                this.trangthai = true;
+
+            }
+            this.pin--;
+        }
+
+        setPin(pin) {
+            this.pin = pin;
+        }
+
+        tatDienThoai() {
+            if (this.trangthai = false) {
+                alert('điện thoại thoại đã tắt')
+            } else {
+                this.trangthai = false;
+                alert('điện thoại thoại đã tắt')
+            }
+            this.pin--;
+        }
+
+        setThuNhap(tinnhan) {
+            if (this.trangthai) {
+                this.thunhap.push(tinnhan);
+                this.pin--;
+            } else {
+                alert("điện thoại đang tắt");
+            }
+        }
+
+        goiTinNhan(dienThoai, tinnhan) {
+            if (this.trangthai) {
+                this.thudi.push(tinnhan);
+                dienThoai.thuden.unshift(tinnhan);
+                this.pin--;
+            } else {
+                alert('điện thoại đang tắt');
+            }
+
+        }
+
+
+    }
+
+    function stn() {
+        nokia.setThuNhap();
+      let  tinnhan = prompt("nhập tin nhắn")
+        alert(nokia.setThuNhap(tinnhan));
+
+    }
+
+    let nokia = new Dienthoai(100, [], [], [], true);
+    let iphone = new Dienthoai(100, [], [], [], true);
+    document.getElementById("pin").innerHTML = nokia.setPin();
+    //console.log(nokia.setPin(100))
+    // nokia.batDienThoai()
+</script>
+</body>
+</html>
