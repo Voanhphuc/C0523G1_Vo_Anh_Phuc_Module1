@@ -6,89 +6,81 @@
 </head>
 <body>
 
-<button onclick="nokia.batDienThoai()">Bật điệ thoại</button>
-<button onclick="stn()">Soạn tin nhắn</button>
-<button onclick="nokia.goiTinNhan()">Gởi tin nhắn</button>
-<button onclick="nokia.tatDienThoai()">Tắt điệ thoại</button>
-<p>Pin: <span id="pin"></span>%</p>
 <script>
-    class Dienthoai {
-        constructor(pin, thunhap, thuden, thudi, trangthai) {
-            this.pin = pin;
-            this.thunhap = thunhap;
-            this.thuden = thuden;
-            this.thudi = thudi;
-            this.trangthai = trangthai;
+    class MobiPhone {
+        constructor(battery, draft, inbox, outbox, status) {
+            this.battery = battery;
+            this.draft = draft;
+            this.inbox = inbox;
+            this.outbox = outbox;
+            this.status = status;
         }
 
-        ktTrangThai() {
-            if (this.trangthai) {
-                alert("Điện thoại đang bật");
+        checkStatus() {
+            if (this.status) {
+                alert("The mobile is ON.")
             } else {
-                alert("Điện thoại đang tắt")
+                alert("The mobile is OFF.")
             }
-            this.pin--;
+            this.battery--;
         }
 
-        batDienThoai() {
-            if (this.trangthai) {
-                alert("Điện thoại đã bật");
+        turnOn() {
+            if (this.status) {
+                alert("Điện thoại đã bật.")
             } else {
-                this.trangthai = true;
-
-            }
-            this.pin--;
-        }
-
-        setPin(pin) {
-            this.pin = pin;
-        }
-
-        tatDienThoai() {
-            if (this.trangthai = false) {
-                alert('điện thoại thoại đã tắt')
-            } else {
-                this.trangthai = false;
-                alert('điện thoại thoại đã tắt')
-            }
-            this.pin--;
-        }
-
-        setThuNhap(tinnhan) {
-            if (this.trangthai) {
-                this.thunhap.push(tinnhan);
-                this.pin--;
-            } else {
-                alert("điện thoại đang tắt");
+                this.status = true;
+                this.battery--;
             }
         }
 
-        goiTinNhan(dienThoai, tinnhan) {
-            if (this.trangthai) {
-                this.thudi.push(tinnhan);
-                dienThoai.thuden.unshift(tinnhan);
-                this.pin--;
-            } else {
-                alert('điện thoại đang tắt');
-            }
-
+        setBattery(battery) {
+            this.battery = battery;
         }
 
+        setMessageDraft(message) {
+            if (this.status) {
+                this.draft.unshift(message);
+                this.battery--;
+            } else {
+                alert("Điện thoại đang tắt.")
+            }
+        }
 
+        sendMessage(mobilePhone, message) {
+            if (this.status) {
+                this.outbox.push(message); //hộp thư đi
+                mobilePhone.inbox.unshift(message) //hộp thư đến của điện thoại nhận
+                this.battery--;
+            } else {
+                alert("Điện thoại đang tắt.")
+            }
+        }
+
+        receiveMessage(ms) {
+            if (this.status) {
+                this.inbox.unshift(ms);
+                alert("Có tin nhắn mới");
+                this.battery--;
+            } else {
+                alert("Điện thoại đang tắt.")
+            }
+        }
     }
 
-    function stn() {
-        nokia.setThuNhap();
-      let  tinnhan = prompt("nhập tin nhắn")
-        alert(nokia.setThuNhap(tinnhan));
+    let nokia = new MobiPhone(60, [], [], [], true)
+    let iphone = new MobiPhone(90, [], [], [], true)
 
-    }
-
-    let nokia = new Dienthoai(100, [], [], [], true);
-    let iphone = new Dienthoai(100, [], [], [], true);
-    document.getElementById("pin").innerHTML = nokia.setPin();
-    //console.log(nokia.setPin(100))
-    // nokia.batDienThoai()
+    // nokia.turnOn();
+    // nokia.checkStatus();
+    // nokia.checkStatus()
+    // nokia.setBattery(100)
+    // iphone.setMessageDraft("Hello")
+    nokia.receiveMessage("Có khuyến mãi ngày mai")
+    nokia.sendMessage(iphone, 'Di cafe không?');
+    console.log('Nokia inbox: ', nokia.inbox);
+    // console.log('Nokia outbox: ', nokia.outbox);
+     console.log('Iphone inbox: ', iphone.inbox);
 </script>
 </body>
 </html>
